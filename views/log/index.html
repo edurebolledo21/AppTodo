@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body class="h-screen text-slate-50">
+    <nav class="flex items-center flex-row justify-between p-4 bg-slate-500 dark:bg-slate-900" id="navegation-bar">
+        <h1 class="text-3xl font-mono" id="title">CHECK</h1>
+        <div class="flex flex-row gap-8 mx-10" id="options">
+            <a href="/">
+                <h2 class="cursor-pointer">Home</h2>
+            </a>
+            <a href="/registro/">
+                <h2 class="cursor-pointer">Registrar</h2>
+            </a>
+            <a href="/app/">
+                <h2 class="cursor-pointer">App</h2>
+            </a>
+        </div>
+    </nav>
+    <div class="flex flex-col gap-4 justify-center items-center h-full px-4 bg-slate-400 dark:bg-slate-800">
+        <form id="form" class="bg-slate-900 w-full md:w-6/12 h-6/12 p-4 rounded-lg flex flex-col gap-4">
+            <div class="flex flex-col gap-2 dark:text-white">
+                <label class="font-bolt" for="email-input">Correo electronico</label>
+                <input class="outline-none p-2 rounded-lg bg-slate-300 dark:bg-slate-600" required type="email"
+                    name="email-input" id="email-input">
+            </div>
+            <div class="flex flex-col gap-2 dark:text-white">
+                <label class="font-bolt" for="email-pass">Contraseña</label>
+                <input class="outline-none p-2 rounded-lg bg-slate-300 dark:bg-slate-600" required type="password"
+                    name="pass-input" id="email-pass">
+            </div>
+            <button class="p-2 rounded-lg bg-red-900 hover:bg-red-600 transition-all duration-500 " type="submit">SING
+                IN</button>
+        </form>
+        <p>Aun no tienes cuenta? <a class="text-red-600 hover:text-red-900 transition-all duration-500 cursor-pointer"
+                href="/registro/">Registrate</a></p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
