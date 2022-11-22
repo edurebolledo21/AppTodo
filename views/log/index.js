@@ -8,7 +8,7 @@ formulario.addEventListener('submit', async e => {
 
         const email = inputEmail.value;
         const password = inputPass.value;
-        const { data: credentials } = await axios.post('http://localhost:3003/api/login',
+        const { data: credentials } = await axios.post('/api/login',
             { email, password });
         console.log(credentials);
         window.location.replace(`/app/${credentials.userId}`)

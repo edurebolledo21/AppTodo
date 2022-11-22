@@ -52,7 +52,7 @@ formulario.addEventListener('submit', async e => {
             password: inputPass.value
         }
 
-        await axios.post('http://localhost:3003/api/users', newUser);
+        await axios.post('/api/users', newUser);
         window.location.pathname = '/log'
 
     } catch (error) {
